@@ -47,13 +47,17 @@
     CGAssociateMouseAndMouseCursorPosition (1);
     
     
+    // send Keyboard event
+    
+    
     //for more keys check this http://web.archive.org/web/20100501161453/http://www.classicteck.com/rbarticles/mackeyboard.php
-    
-    
     
     // https://developer.apple.com/library/mac/documentation/Carbon/Reference/QuartzEventServicesRef/index.html#//apple_ref/c/func/CGEventCreateKeyboardEvent
     
-//    http://stackoverflow.com/questions/2666154/cocoa-virtual-keystrokes-pain
+    //  http://stackoverflow.com/questions/2666154/cocoa-virtual-keystrokes-pain
+    
+    
+    //126 rbKeyUp
     CGEventRef event1, event2, event3, event4;
     event1 = CGEventCreateKeyboardEvent (NULL, (CGKeyCode)126, true);
     event2 = CGEventCreateKeyboardEvent (NULL, (CGKeyCode)126, false);
@@ -61,11 +65,7 @@
     event4 = CGEventCreateKeyboardEvent (NULL, (CGKeyCode)125, false);
     CGEventPost(kCGHIDEventTap, event1);
     CGEventPost(kCGHIDEventTap, event2);
-    
-    
-    
-//    CGEventPost(kCGHIDEventTap, event3);
-//    CGEventPost(kCGHIDEventTap, event4);
+
 
 }
 -(int)getRandomNumberBetween:(int)from to:(int)to {
