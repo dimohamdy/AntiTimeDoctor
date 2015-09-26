@@ -4,4 +4,4 @@ Welcome to the AntiTimeDoctor wiki!
 
 
 ### Todo List 
-1.~~ Make shortcut to stop App~~  the shortcut is Command+v
+1.~~Make shortcut to stop App~~  the shortcut is Command+v
