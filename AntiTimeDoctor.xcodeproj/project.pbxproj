@@ -13,6 +13,11 @@
 		37616F571BB6D0EE0042BC56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37616F561BB6D0EE0042BC56 /* Images.xcassets */; };
 		37616F5A1BB6D0EE0042BC56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37616F581BB6D0EE0042BC56 /* Main.storyboard */; };
 		37616F661BB6D0EF0042BC56 /* AntiTimeDoctorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37616F651BB6D0EF0042BC56 /* AntiTimeDoctorTests.m */; };
+		37616F7A1BB6EDF10042BC56 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37616F791BB6EDF10042BC56 /* Carbon.framework */; };
+		37616F7C1BB6EE250042BC56 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37616F7B1BB6EE250042BC56 /* Cocoa.framework */; };
+		37616F871BB6F0690042BC56 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37616F821BB6F0690042BC56 /* DDHotKeyCenter.m */; };
+		37616F881BB6F0690042BC56 /* DDHotKeyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 37616F841BB6F0690042BC56 /* DDHotKeyTextField.m */; };
+		37616F891BB6F0690042BC56 /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 37616F861BB6F0690042BC56 /* DDHotKeyUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,14 @@
 		37616F5F1BB6D0EE0042BC56 /* AntiTimeDoctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntiTimeDoctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37616F641BB6D0EF0042BC56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37616F651BB6D0EF0042BC56 /* AntiTimeDoctorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiTimeDoctorTests.m; sourceTree = "<group>"; };
+		37616F791BB6EDF10042BC56 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		37616F7B1BB6EE250042BC56 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		37616F811BB6F0690042BC56 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyCenter.h; sourceTree = "<group>"; };
+		37616F821BB6F0690042BC56 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyCenter.m; sourceTree = "<group>"; };
+		37616F831BB6F0690042BC56 /* DDHotKeyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyTextField.h; sourceTree = "<group>"; };
+		37616F841BB6F0690042BC56 /* DDHotKeyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyTextField.m; sourceTree = "<group>"; };
+		37616F851BB6F0690042BC56 /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDHotKeyUtilities.h; sourceTree = "<group>"; };
+		37616F861BB6F0690042BC56 /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDHotKeyUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37616F7C1BB6EE250042BC56 /* Cocoa.framework in Frameworks */,
+				37616F7A1BB6EDF10042BC56 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +94,14 @@
 		37616F4B1BB6D0EE0042BC56 /* AntiTimeDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				37616F801BB6F0690042BC56 /* DDHotKey */,
 				37616F4E1BB6D0EE0042BC56 /* AppDelegate.h */,
 				37616F4F1BB6D0EE0042BC56 /* AppDelegate.m */,
 				37616F531BB6D0EE0042BC56 /* ViewController.h */,
 				37616F541BB6D0EE0042BC56 /* ViewController.m */,
 				37616F561BB6D0EE0042BC56 /* Images.xcassets */,
 				37616F581BB6D0EE0042BC56 /* Main.storyboard */,
+				37616F7F1BB6F0430042BC56 /* Framework */,
 				37616F4C1BB6D0EE0042BC56 /* Supporting Files */,
 			);
 			path = AntiTimeDoctor;
@@ -114,6 +131,28 @@
 				37616F641BB6D0EF0042BC56 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37616F7F1BB6F0430042BC56 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				37616F7B1BB6EE250042BC56 /* Cocoa.framework */,
+				37616F791BB6EDF10042BC56 /* Carbon.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		37616F801BB6F0690042BC56 /* DDHotKey */ = {
+			isa = PBXGroup;
+			children = (
+				37616F811BB6F0690042BC56 /* DDHotKeyCenter.h */,
+				37616F821BB6F0690042BC56 /* DDHotKeyCenter.m */,
+				37616F831BB6F0690042BC56 /* DDHotKeyTextField.h */,
+				37616F841BB6F0690042BC56 /* DDHotKeyTextField.m */,
+				37616F851BB6F0690042BC56 /* DDHotKeyUtilities.h */,
+				37616F861BB6F0690042BC56 /* DDHotKeyUtilities.m */,
+			);
+			path = DDHotKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37616F881BB6F0690042BC56 /* DDHotKeyTextField.m in Sources */,
 				37616F551BB6D0EE0042BC56 /* ViewController.m in Sources */,
 				37616F521BB6D0EE0042BC56 /* main.m in Sources */,
 				37616F501BB6D0EE0042BC56 /* AppDelegate.m in Sources */,
+				37616F871BB6F0690042BC56 /* DDHotKeyCenter.m in Sources */,
+				37616F891BB6F0690042BC56 /* DDHotKeyUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +449,7 @@
 				37616F6B1BB6D0EF0042BC56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37616F6C1BB6D0EF0042BC56 /* Build configuration list for PBXNativeTarget "AntiTimeDoctorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +458,7 @@
 				37616F6E1BB6D0EF0042BC56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
